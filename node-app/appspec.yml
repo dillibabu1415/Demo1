@@ -2,9 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /root/deploy_dir/node-app
+    destination: /root/deploy_dir/node-new-app
 hooks:
   BeforeInstall:
+    - location: scripts/clean_node.sh
+      timeout: 300
+      runas: root
     - location: scripts/setup_node.sh
       timeout: 180
       runas: root
