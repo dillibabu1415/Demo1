@@ -3,14 +3,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from EC2 Node.js App!');
+  res.send('Hello DILLIBABU S from EC2 Node.js App! Automatecheck');
 });
 
 app.get('/health', (req, res) => {
   res.status(200).send('OK');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
 
